@@ -7,11 +7,6 @@ echo -n "Enter the mac address to search for: "
 read mac
 
 # Convert the mac address to the desired format
-#if [[ ${mac} == ??:??:??:??:??:?? ]]; then
-#       sed 's/\://;s/\:/./;s/\://;s/\:/./;s/\://' <<< ${mac}
-#elif [[ ${mac} == ????.????.???? ]]; then
-#       sed 's/\.//g;s/\(..\)/\1:/g;s/:$//' <<< ${mac}
-#fi
 
 if [[ ${mac} == ??:??:??:??:??:?? ]]; then
         mac=$(sed 's/\://;s/\:/./;s/\://;s/\:/./;s/\://' <<< ${mac})
